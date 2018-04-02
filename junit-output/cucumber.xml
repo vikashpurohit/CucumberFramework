@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="0">
+<testcase classname="Free CRM Test Feature For Contacts" name="Free CRM Test Contacts Scenario" time="0">
+<system-out><![CDATA[Given user is already on Login Pages........................................skipped
+When title of Login Page is Free CRMs.......................................skipped
+Then users enters "vikashp" and "test@123"..................................skipped
+Then user clicks on Login Buttons...........................................skipped
+Then user is on Home Pages..................................................skipped
+Then user mouse over on Contactss...........................................skipped
+Then user click on new contacts links.......................................skipped
+Then user enters contacts details "krish" and "tiwari" and "manager"........skipped
+And user click on save buttons..............................................skipped
+Then close the browsers.....................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Free CRM Test Feature For Contacts" name="Free CRM Test Contacts Scenario 2" time="0">
+<system-out><![CDATA[Given user is already on Login Pages........................................skipped
+When title of Login Page is Free CRMs.......................................skipped
+Then users enters "vikashp" and "test@123"..................................skipped
+Then user clicks on Login Buttons...........................................skipped
+Then user is on Home Pages..................................................skipped
+Then user mouse over on Contactss...........................................skipped
+Then user click on new contacts links.......................................skipped
+Then user enters contacts details "raj" and "dubey" and "CEO"...............skipped
+And user click on save buttons..............................................skipped
+Then close the browsers.....................................................skipped
+]]></system-out>
+</testcase>
+</testsuite>
