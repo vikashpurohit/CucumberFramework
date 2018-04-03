@@ -1,4 +1,4 @@
-package stepDefinition;
+/*package stepDefinition;
 
 import java.util.concurrent.TimeUnit;
 
@@ -13,19 +13,11 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-//import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.WebElement;
-//import org.openqa.selenium.chrome.ChromeDriver;
-//import org.openqa.selenium.interactions.Actions;
-//
-//import cucumber.api.java.en.And;
-//import cucumber.api.java.en.Given;
-//import cucumber.api.java.en.Then;
-//import cucumber.api.java.en.When;
+
 import junit.framework.Assert;
 
 public class LoginStepDefinition {
-/*
+
 	WebDriver driver;
 
 	@Given("^user is already on Login Page$")
@@ -96,4 +88,5 @@ public class LoginStepDefinition {
 	public void close_the_browser() {
 		driver.quit();
 	}
-*/}
+}
+*/

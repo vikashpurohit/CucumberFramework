@@ -1,29 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="0">
-<testcase classname="Free CRM Test Feature For Contacts" name="Free CRM Test Contacts Scenario" time="0">
-<system-out><![CDATA[Given user is already on Login Pages........................................skipped
-When title of Login Page is Free CRMs.......................................skipped
-Then users enters "vikashp" and "test@123"..................................skipped
-Then user clicks on Login Buttons...........................................skipped
-Then user is on Home Pages..................................................skipped
-Then user mouse over on Contactss...........................................skipped
-Then user click on new contacts links.......................................skipped
-Then user enters contacts details "krish" and "tiwari" and "manager"........skipped
-And user click on save buttons..............................................skipped
-Then close the browsers.....................................................skipped
-]]></system-out>
-</testcase>
-<testcase classname="Free CRM Test Feature For Contacts" name="Free CRM Test Contacts Scenario 2" time="0">
-<system-out><![CDATA[Given user is already on Login Pages........................................skipped
-When title of Login Page is Free CRMs.......................................skipped
-Then users enters "vikashp" and "test@123"..................................skipped
-Then user clicks on Login Buttons...........................................skipped
-Then user is on Home Pages..................................................skipped
-Then user mouse over on Contactss...........................................skipped
-Then user click on new contacts links.......................................skipped
-Then user enters contacts details "raj" and "dubey" and "CEO"...............skipped
-And user click on save buttons..............................................skipped
-Then close the browsers.....................................................skipped
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="21.291582">
+<testcase classname="Deal data creation" name="Free CRM Test create a new Deal Scenario" time="21.291582">
+<system-out><![CDATA[Given user is already on Login Pages........................................passed
+When title of Login Page is Free CRMs.......................................passed
+Then users enters username and password.....................................passed
+Then user clicks on Login Buttons...........................................passed
+Then user is on Home Pages..................................................passed
+Then user mouse over on deals...............................................passed
+Then user click on new deal links...........................................passed
+Then user enters new deals details..........................................passed
+Then user click on save buttons.............................................passed
+Then close the browsers.....................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
