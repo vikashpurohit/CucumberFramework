@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
 			format= {"pretty","html:test-outout","json:json-output/cucumber.json","junit:junit-output/cucumber.xml"},
 			dryRun=false ,
 			monochrome= true,
-			strict=true
+			strict=true // strictly follow the mspping
 			)
 	
 	public class TestRunner{
