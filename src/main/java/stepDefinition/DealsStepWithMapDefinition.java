@@ -1,6 +1,7 @@
-/*package stepDefinition;
+package stepDefinition;
 
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -17,7 +18,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import junit.framework.Assert;
 
-public class DealsStepDefinition {
+public class DealsStepWithMapDefinition {
 	WebDriver driver;
 
 	@Given("^user is already on Login Pages$")
@@ -41,10 +42,11 @@ public class DealsStepDefinition {
 	@Then("^users enters username and password$")
 	public void users_enters_username_and_password(DataTable Credentials) {
 
-		List<List<String>> tableValue= Credentials.raw();
-		
-		driver.findElement(By.xpath("//*[@name='username']")).sendKeys(tableValue.get(0).get(0));
-		driver.findElement(By.xpath("//*[@name='password']")).sendKeys(tableValue.get(0).get(1));
+		for (Map<String, String> tableValue : Credentials.asMaps(String.class, String.class)) {
+
+			driver.findElement(By.xpath("//*[@name='username']")).sendKeys(tableValue.get("username"));
+			driver.findElement(By.xpath("//*[@name='password']")).sendKeys(tableValue.get("password"));
+		}
 	}
 
 	@Then("^user clicks on Login Buttons$")
@@ -75,28 +77,33 @@ public class DealsStepDefinition {
 	}
 
 	@Then("^user enters new deals details$")
-	public void user_enters_new_deals_details(DataTable dataValue) {
+	public void user_enters_new_deals_details(DataTable dealData) {
 
-		List<List<String>> tablevalue=dataValue.raw();
-		
-		driver.findElement(By.id("title")).sendKeys(tablevalue.get(0).get(0));
-		driver.findElement(By.id("amount")).sendKeys(tablevalue.get(0).get(1));
-		driver.findElement(By.id("probability")).sendKeys(tablevalue.get(0).get(2));
-		driver.findElement(By.id("commission")).sendKeys(tablevalue.get(0).get(3));
+		for (Map<String, String> data : dealData.asMaps(String.class, String.class)) {
 
-		
+			driver.findElement(By.id("title")).sendKeys(data.get("title"));
+			driver.findElement(By.id("amount")).sendKeys(data.get("amount"));
+			driver.findElement(By.id("probability")).sendKeys(data.get("probability"));
+			driver.findElement(By.id("commission")).sendKeys(data.get("commission"));
+
+			driver.findElement(By.xpath("//input[@type='submit' and @value='Save']")).click(); // save button
+
+			// move to new deal page:
+			Actions action = new Actions(driver);
+			action.moveToElement(driver.findElement(By.xpath("//a[contains(text(),'Deals')]"))).build().perform();
+			driver.findElement(By.xpath("//a[contains(text(),'New Deal')]")).click();
+		}
 	}
 
-	@And("^user click on save buttons$")
-	public void user_click_on_save_buttons() {
-			driver.findElement(By.xpath("//input[@type='submit' and @value='Save']")).click();
-
-	}
-	
+	/*
+	 * @And("^user click on save buttons$") public void user_click_on_save_buttons()
+	 * {
+	 * 
+	 * }
+	 */
 	@Then("^close the browsers$")
 	public void close_the_browsers() {
 		driver.quit();
 	}
 
 }
-*/
